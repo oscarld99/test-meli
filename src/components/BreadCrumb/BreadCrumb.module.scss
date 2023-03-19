@@ -1,0 +1,15 @@
+@import 'assets/styles/variables';
+
+.breadCrumb__container {
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    max-width: $max-width-lg;
+    width: 100%;
+
+    & p {
+        color: $color-grey;
+        font-size: $font-size-sm;
+        margin: $font-size-md;
+    }
+}

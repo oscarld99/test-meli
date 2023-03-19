@@ -1,0 +1,10 @@
+@import 'assets/styles/variables';
+
+.app__container{
+  background-color: $color-lightGrey;
+  height: max-content;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 32px;
+  width: 100%;
+}

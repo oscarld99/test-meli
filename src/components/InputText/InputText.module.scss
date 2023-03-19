@@ -1,0 +1,13 @@
+@import 'assets/styles/variables';
+
+.inputText__container {
+    border-radius: $border-radius-sm 0 0 $border-radius-sm;
+    border: none;
+    font-size: $font-size-lg;
+    padding: 12px;
+    width: 90%;
+
+    &:active {
+        border: none;
+    }
+}

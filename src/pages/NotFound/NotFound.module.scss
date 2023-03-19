@@ -1,0 +1,26 @@
+@import 'assets/styles/variables';
+
+.notFound__body {
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.notFound__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    & h4 {
+        color: $color-dark;
+        font-size: 20px;
+    }
+
+    & a {
+        color: $color-darkGrey;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+}

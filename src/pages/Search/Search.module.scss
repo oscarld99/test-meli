@@ -1,0 +1,11 @@
+@import 'assets/styles/variables';
+
+.search__container {
+    max-width: $max-width-lg;
+    width: 100%;
+}
+
+.search__items {
+    background-color: $color-white;
+    border-radius: $border-radius-sm;
+}

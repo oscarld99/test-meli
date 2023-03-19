@@ -1,0 +1,22 @@
+@import 'assets/styles/variables';
+
+.header__body {
+    background-color: $color-yellow;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    width: 100%;
+}
+
+.header__container {
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    max-width: $max-width-lg;
+    width: 100%;
+}
+
+.header__logoImg {
+    height: 32px;
+    width: 48px;
+}
