@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './SearchItem.module.scss'
 import { Item } from 'interfaces'
+import { castMoney } from 'utils/castMoney'
 
 const SearchItem = ({ item }: { item: Item }) => {
 
@@ -17,7 +18,7 @@ const SearchItem = ({ item }: { item: Item }) => {
 
       <div className={styles.searchItem__detail}>
         <h3>
-          {`$ ${item.price.amount}.${item.price.decimals}`}
+          {`$ ${castMoney(`${item.price.amount}.${item.price.decimals}`)}`}
         </h3>
         <div>
           <h4>

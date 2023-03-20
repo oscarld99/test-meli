@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BreadCrumb from 'components/BreadCrumb'
 import styles from './Detail.module.scss'
-import { detailMock } from '__mocks__'
+import { ItemDetail } from 'interfaces'
+import ItemsService from 'services/items/Items.service'
+import { getProductId } from 'utils/getProductId'
+import { castMoney } from 'utils/castMoney'
 
 const Detail = () => {
 
-  const item = detailMock.item
+  const [item, setItem] = useState<ItemDetail>({} as ItemDetail)
+
+  const searchProducts = async (productId: string) => {
+    const itemsResponse = await ItemsService.getItemById(productId)
+    setItem(itemsResponse.item)
+  }
+
+  useEffect(() => {
+    const productId = getProductId()
+    searchProducts(productId)
+  }, [])
+
+  if (!item || !item.title) {
+    return <div>Loading ...</div >
+  }
 
   return (
     <div className={styles.detail__body}>
@@ -16,7 +33,7 @@ const Detail = () => {
           <div className={styles.detail__info}>
             <p>{`${item.condition} - ${item.sold_quantity} vendidos`}</p>
             <p>{item.title}</p>
-            <h3>{`$ ${item.price.amount}`}</h3>
+            <h3>{`$ ${castMoney(`${item.price.amount}.${item.price.decimals}`)}`}</h3>
             <button>Comprar</button>
           </div>
         </div>

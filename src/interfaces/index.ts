@@ -1,2 +1,2 @@
 export * from './detailResponse.interface'
-export * from './searchResponseesponses.interface'
+export * from './searchResponse.interface'

@@ -1,4 +1,4 @@
-import { Author } from "./searchResponseesponses.interface";
+import { Author } from "./searchResponse.interface";
 
 export interface DetailResponse {
     author: Author;

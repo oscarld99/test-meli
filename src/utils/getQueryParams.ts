@@ -6,8 +6,8 @@
  * @description get params from url
  */
 
-export const getQueryParams = (parameters: string): string => {
+export const getQueryParams = (parameter: string): string => {
     const queryParams = new URLSearchParams(window.location.search)
-    const searhParameter = queryParams.get(parameters)
+    const searhParameter = queryParams.get(parameter)
     return searhParameter ?? ''
 }
