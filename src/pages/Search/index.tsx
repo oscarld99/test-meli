@@ -5,6 +5,7 @@ import BreadCrumb from 'components/BreadCrumb'
 import ItemsService from 'services/items/Items.service'
 import { SearchResponse } from 'interfaces'
 import { getQueryParams } from 'utils/getQueryParams'
+import SearchItemLoader from 'components/Loaders/SearchItemLoader'
 
 const Search = () => {
 
@@ -21,7 +22,15 @@ const Search = () => {
   }, [])
 
   if (!searchData.items || searchData.items.length === 0) {
-    return <div>Loading ...</div >
+    return <div className={styles.search__container}>
+      <BreadCrumb />
+      <div className={styles.search__items}>
+        <SearchItemLoader />
+        <SearchItemLoader />
+        <SearchItemLoader />
+        <SearchItemLoader />
+      </div>
+    </div>
   }
 
   return (
