@@ -1,0 +1,21 @@
+@import 'assets/styles/variables';
+
+.empty__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    & h3 {
+        color: $color-darkGrey;
+        font-size: $font-size-xl;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    & img {
+        height: auto;
+        width: 90%;
+    }
+}

@@ -4,11 +4,14 @@ import { Item } from 'interfaces'
 import { castMoney } from 'utils/castMoney'
 import shippingImage from 'assets/images/ic_shipping.png'
 import styles from './SearchItem.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 const SearchItem = ({ item }: { item: Item }) => {
 
+  const navigate = useNavigate();
+
   const onClick = () => {
-    window.location.href = `/items/${item.id}`
+    navigate(`/items/${item.id}`)
   }
 
   return (
@@ -36,7 +39,7 @@ const SearchItem = ({ item }: { item: Item }) => {
         </div>
         <div className={styles.searchItem__location}>
           <p>
-            {item.condition}
+            {item.city}
           </p>
         </div>
       </div>

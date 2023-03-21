@@ -10,14 +10,14 @@ export interface Author {
 }
 
 export interface Item {
-    id: string;
-    title: string;
-    price: Price;
-    picture: string;
+    city: string;
     condition: string;
     free_shipping: boolean;
+    id: string;
+    picture: string;
+    price: Price;
+    title: string;
 }
-
 export interface Price {
     currency: string;
     amount: number;

@@ -10,7 +10,7 @@ const prepareCategories = (categories: string[]) => {
     return breadCrumbText
 }
 
-const BreadCrumb = ({ categories }: { categories: string[] }) => {
+const BreadCrumb = ({ categories = [] }: { categories?: string[] }) => {
 
     const categoryText = prepareCategories(categories)
 

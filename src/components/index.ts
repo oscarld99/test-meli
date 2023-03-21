@@ -1,4 +1,5 @@
 export * from './BreadCrumb'
+export * from './Error'
 export * from './InputText'
 export * from './Header'
 export * from './SearchBar'

@@ -1,7 +1,6 @@
 
 import ItemsApi from 'api/items/index'
 import { DetailResponse, SearchResponse } from 'interfaces'
-import { detailMock, searchMock } from '__mocks__'
 
 class ItemService {
     private static _instance: ItemService
@@ -19,23 +18,23 @@ class ItemService {
         return ItemService._instance
     }
 
-    getItems = async (query: string): Promise<SearchResponse> => {
+    getItems = async (query: string): Promise<SearchResponse | null> => {
         try {
             const result = await this.itemsApi.getItemsByQuery<SearchResponse>(query)
             return result.data
         } catch ({ error }) {
             console.log('error in ItemsService getItems', error)
-            return searchMock
+            return null
         }
     }
 
-    getItemById = async (productId: string): Promise<DetailResponse> => {
+    getItemById = async (productId: string): Promise<DetailResponse | null> => {
         try {
             const result = await this.itemsApi.getItemById<DetailResponse>(productId)
             return result.data
         } catch ({ error }) {
             console.log('error in ItemsService getItemById', error)
-            return detailMock
+            return null
         }
     }
 

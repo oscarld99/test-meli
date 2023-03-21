@@ -13,6 +13,7 @@ const searchMock: SearchResponse = {
     "items": [
         {
             "id": "MLA1112431294",
+            "city": "Mendoza",
             "title": "Samsung Galaxy A03s 64 Gb  Negro 4 Gb Ram",
             "price": {
                 "currency": "ARS",
@@ -25,6 +26,7 @@ const searchMock: SearchResponse = {
         },
         {
             "id": "MLA1373154982",
+            "city": "Mendoza",
             "title": "Tcl 30 Se 256 Gb  Space Gray 6 Gb Ram",
             "price": {
                 "currency": "ARS",
@@ -37,6 +39,7 @@ const searchMock: SearchResponse = {
         },
         {
             "id": "MLA1329166828",
+            "city": "Mendoza",
             "title": "Samsung Galaxy S23 Ultra 12gb 512gb Green",
             "price": {
                 "currency": "ARS",
@@ -49,6 +52,7 @@ const searchMock: SearchResponse = {
         },
         {
             "id": "MLA1362577585",
+            "city": "Mendoza",
             "title": "Moto E32 64 Gb  Plata 4 Gb Ram",
             "price": {
                 "currency": "ARS",
