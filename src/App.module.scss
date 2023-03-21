@@ -2,44 +2,14 @@
 
 .app__container {
   background-color: $color-lightGrey;
-  height: max-content;
-  overflow-x: hidden;
-  overflow-y: auto;
+  height: calc(100vh - 32px);
+  overflow: hidden auto;
   padding-bottom: 32px;
   width: 100%;
 }
 
-.loader {
-  background-color: $color-white;
-  border-radius: 2px;
-  height: 150px;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-
-  &:after {
-    content: '';
-    animation-duration: .8s;
-    animation-iteration-count: infinite;
-    animation-name: loader-animate;
-    animation-timing-function: linear;
-    background-color: #636363;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 81%);
-    border-radius: 10px;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  &:before {
-    content: '';
-    background-color: #ededed;
-    border-radius: 6px;
-    box-shadow: -48px 78px 0 -48px #ededed, -51px 102px 0 -51px #ededed;
-    display: block;
-    height: 150px;
-  }
+.app__body {
+  display: flex;
+  justify-content: center;
+  margin-top: 62px;
 }

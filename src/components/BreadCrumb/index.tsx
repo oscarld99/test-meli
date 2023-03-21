@@ -1,10 +1,22 @@
 import React from 'react'
 import styles from './BreadCrumb.module.scss'
 
-const BreadCrumb = () => {
+const prepareCategories = (categories: string[]) => {
+    let breadCrumbText = '';
+    categories.forEach((category, index) => {
+        if (index > 0) breadCrumbText += ' > '
+        breadCrumbText += category
+    })
+    return breadCrumbText
+}
+
+const BreadCrumb = ({ categories }: { categories: string[] }) => {
+
+    const categoryText = prepareCategories(categories)
+
     return (
         <div className={styles.breadCrumb__container}>
-            <p>{'Electronica, Audio y Video > Ipod > Reproductores > Ipad touch > 32 GB'}</p>
+            <p>{categoryText}</p>
         </div>
     )
 }

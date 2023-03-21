@@ -7,7 +7,7 @@ function App() {
   return (
     <div className={styles.app__container}>
       <Header />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div className={styles.app__body}>
         <Router />
       </div>
     </div>

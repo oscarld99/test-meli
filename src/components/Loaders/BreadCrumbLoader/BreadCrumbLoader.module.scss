@@ -1,0 +1,15 @@
+@import 'assets/styles/variables';
+
+.breadCrumbLoader__container {
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    padding: 12px;
+    max-width: $max-width-lg;
+    width: 100%;
+}
+
+.breadCrumbLoader__item {
+    height: 14px;
+    width: 10%;
+}

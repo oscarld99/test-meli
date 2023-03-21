@@ -1,0 +1,49 @@
+@import 'assets/styles/variables';
+
+.detailLoader__container {
+    background-color: $color-white;
+    border-radius: $border-radius-sm;
+}
+
+.detailLoader__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.detailLoader__image {
+    height: 680px;
+    width: 680px;
+}
+
+.detailLoader__info {
+    padding: 32px 16px 0;
+    width: calc($max-width-lg - 680px);
+}
+
+.detailLoader__condition {
+    height: 16px;
+    margin: 16px 0;
+    width: 70%;
+}
+
+.detailLoader__itemDetail {
+    padding: 32px;
+    max-width: 648px;
+}
+
+.detailLoader__h3 {
+    height: 32px;
+    margin-bottom: 32px;
+    width: 60%;
+}
+
+.detailLoader__button {
+    height: 38px;
+    width: 80%;
+}
+
+.detailLoader__description {
+    height: 16px;
+    margin: 16px 0;
+    width: 100%;
+}
