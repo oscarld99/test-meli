@@ -1,46 +1,90 @@
-# Getting Started with Create React App
+## Test Mercado libre
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The content of this test includes:
 
-## Available Scripts
+- React js
+- Sass
+- Typescript
+- React Router Dom
+- Test with testing Library
+- Module css/scss
+- Http client with fetch (I prefer not to use axios or any other library)
+- MockData
 
-In the project directory, you can run:
 
-### `npm start`
+## Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://user-images.githubusercontent.com/74792282/226700425-a10124bf-90ed-49ca-987c-3680136047cb.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/74792282/226700915-897d6240-0e5e-4f8d-bbcb-4a9c22bbf078.png)
 
-### `npm test`
+![image](https://user-images.githubusercontent.com/74792282/226700989-9e05aa59-d391-4002-a397-4ca8bd2db470.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+First, install the dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+``` bash
+# install dependencies
+npm install
+```
 
-### `npm run eject`
+Then, create an .env file and then copy the contents of the env.example file:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then, run application:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Documentation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Folder Architecture
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+``` bash
+├ TEST-MELI
+├── build
+├── node_modules
+├── public
+├── src
+│   ├── __mocks__
+│   ├── api
+│   │   └── items
+│   │       ├── index.ts
+│   │       └── ItemsApi.ts
+│   ├── assets
+│   │   │── images
+│   │   └── styles
+│   │── components
+│   │   └── Component
+│   │       ├── Component.module.scss
+│   │       └── index.tsx
+│   ├── config
+│   │   └── server
+│   │       └── index.ts
+│   ├── interfaces
+│   ├── lib
+│   │   └── client
+│   │       └── index.tsx
+│   ├── pages
+│   │   │── Page
+│   │   │   ├── Page.tsx
+│   │   │   ├── Page.module.scss
+│   │   │   └── Page.test.tsx
+│   │   └── index.ts
+│   ├── routes
+│   │   └── items
+│   │       ├── index.ts
+│   │       └── Items.service.ts
+│   ├── services
+│   └── utils
+├── .env /* you must create this file */
+├── .gitignore
+├── env.example
+├── package-lock.json
+├── package.json
+├── README.md
+└── tsconfig.json
+```
